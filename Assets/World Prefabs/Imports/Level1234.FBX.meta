@@ -1,0 +1,575 @@
+fileFormatVersion: 2
+guid: 8d9c3836c3f380644b523820e0c794f0
+timeCreated: 1539097095
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box069
+    100002: Box070
+    100004: Box071
+    100006: Box072
+    100008: Box073
+    100010: Box074
+    100012: Box075
+    100014: Box076
+    100016: Box077
+    100018: Box081
+    100020: Box082
+    100022: Box083
+    100024: Box084
+    100026: Box085
+    100028: Box086
+    100030: Box087
+    100032: Box088
+    100034: Box089
+    100036: Box090
+    100038: Box091
+    100040: Box092
+    100042: Box093
+    100044: Box094
+    100046: Box095
+    100048: Box096
+    100050: Box097
+    100052: CubeSmall
+    100054: Door
+    100056: Door002
+    100058: Door003
+    100060: Floor Piece 002
+    100062: Floor Piece 003
+    100064: Floor Piece 004
+    100066: Floor Piece 007
+    100068: Floor Piece 008
+    100070: Floor Piece 01
+    100072: Floor Piece 011
+    100074: Floor Piece 012
+    100076: //RootNode
+    100078: StartPositionLV03
+    100080: StartPositionLV1
+    100082: StartPositionLV2
+    100084: Wall Piece 002
+    100086: Wall Piece 003
+    100088: Wall Piece 004
+    100090: Wall Piece 005
+    100092: Wall Piece 006
+    100094: Wall Piece 007
+    100096: Wall Piece 008
+    100098: Wall Piece 009
+    100100: Wall Piece 01
+    100102: Wall Piece 010
+    100104: Wall Piece 011
+    100106: Wall Piece 012
+    100108: Wall Piece 013
+    100110: Wall Piece 014
+    100112: Wall Piece 015
+    100114: Wall Piece 016
+    100116: Wall Piece 017
+    100118: Wall Piece 018
+    100120: Wall Piece 019
+    100122: Wall Piece 020
+    100124: Wall Piece 021
+    100126: Wall Piece 022
+    100128: Wall Piece 025
+    100130: Wall Piece 026
+    100132: Wall Piece 027
+    100134: Wall Piece 028
+    100136: Wall Piece 029
+    100138: Wall Piece 030
+    100140: Wall Piece 031
+    100142: Wall Piece 032
+    100144: Wall Piece 033
+    100146: Wall Piece 034
+    100148: Wall Piece 035
+    100150: Wall Piece 042
+    100152: Wall Piece 043
+    100154: Wall Piece 050
+    100156: Wall Piece 051
+    100158: Wall Piece 052
+    100160: Wall Piece 053
+    100162: Wall Piece 054
+    100164: Wall Piece 055
+    100166: Wall Piece 056
+    100168: Wall Piece 057
+    100170: Wall Piece 058
+    100172: Wall Piece 059
+    100174: Wall Piece 060
+    100176: Wall Piece 061
+    100178: Wall Piece 062
+    100180: Wall Piece 063
+    100182: Wall Piece 064
+    100184: Wall Piece 065
+    100186: Wall Piece 066
+    100188: Wall Piece 067
+    100190: Wall Piece 068
+    100192: Wall Piece 069
+    100194: Wall Piece 070
+    400000: Box069
+    400002: Box070
+    400004: Box071
+    400006: Box072
+    400008: Box073
+    400010: Box074
+    400012: Box075
+    400014: Box076
+    400016: Box077
+    400018: Box081
+    400020: Box082
+    400022: Box083
+    400024: Box084
+    400026: Box085
+    400028: Box086
+    400030: Box087
+    400032: Box088
+    400034: Box089
+    400036: Box090
+    400038: Box091
+    400040: Box092
+    400042: Box093
+    400044: Box094
+    400046: Box095
+    400048: Box096
+    400050: Box097
+    400052: CubeSmall
+    400054: Door
+    400056: Door002
+    400058: Door003
+    400060: Floor Piece 002
+    400062: Floor Piece 003
+    400064: Floor Piece 004
+    400066: Floor Piece 007
+    400068: Floor Piece 008
+    400070: Floor Piece 01
+    400072: Floor Piece 011
+    400074: Floor Piece 012
+    400076: //RootNode
+    400078: StartPositionLV03
+    400080: StartPositionLV1
+    400082: StartPositionLV2
+    400084: Wall Piece 002
+    400086: Wall Piece 003
+    400088: Wall Piece 004
+    400090: Wall Piece 005
+    400092: Wall Piece 006
+    400094: Wall Piece 007
+    400096: Wall Piece 008
+    400098: Wall Piece 009
+    400100: Wall Piece 01
+    400102: Wall Piece 010
+    400104: Wall Piece 011
+    400106: Wall Piece 012
+    400108: Wall Piece 013
+    400110: Wall Piece 014
+    400112: Wall Piece 015
+    400114: Wall Piece 016
+    400116: Wall Piece 017
+    400118: Wall Piece 018
+    400120: Wall Piece 019
+    400122: Wall Piece 020
+    400124: Wall Piece 021
+    400126: Wall Piece 022
+    400128: Wall Piece 025
+    400130: Wall Piece 026
+    400132: Wall Piece 027
+    400134: Wall Piece 028
+    400136: Wall Piece 029
+    400138: Wall Piece 030
+    400140: Wall Piece 031
+    400142: Wall Piece 032
+    400144: Wall Piece 033
+    400146: Wall Piece 034
+    400148: Wall Piece 035
+    400150: Wall Piece 042
+    400152: Wall Piece 043
+    400154: Wall Piece 050
+    400156: Wall Piece 051
+    400158: Wall Piece 052
+    400160: Wall Piece 053
+    400162: Wall Piece 054
+    400164: Wall Piece 055
+    400166: Wall Piece 056
+    400168: Wall Piece 057
+    400170: Wall Piece 058
+    400172: Wall Piece 059
+    400174: Wall Piece 060
+    400176: Wall Piece 061
+    400178: Wall Piece 062
+    400180: Wall Piece 063
+    400182: Wall Piece 064
+    400184: Wall Piece 065
+    400186: Wall Piece 066
+    400188: Wall Piece 067
+    400190: Wall Piece 068
+    400192: Wall Piece 069
+    400194: Wall Piece 070
+    2300000: Box069
+    2300002: Box070
+    2300004: Box071
+    2300006: Box072
+    2300008: Box073
+    2300010: Box074
+    2300012: Box075
+    2300014: Box076
+    2300016: Box077
+    2300018: Box081
+    2300020: Box082
+    2300022: Box083
+    2300024: Box084
+    2300026: Box085
+    2300028: Box086
+    2300030: Box087
+    2300032: Box088
+    2300034: Box089
+    2300036: Box090
+    2300038: Box091
+    2300040: Box092
+    2300042: Box093
+    2300044: Box094
+    2300046: Box095
+    2300048: Box096
+    2300050: Box097
+    2300052: CubeSmall
+    2300054: Floor Piece 002
+    2300056: Floor Piece 003
+    2300058: Floor Piece 004
+    2300060: Floor Piece 007
+    2300062: Floor Piece 008
+    2300064: Floor Piece 01
+    2300066: Floor Piece 011
+    2300068: Floor Piece 012
+    2300070: StartPositionLV03
+    2300072: StartPositionLV1
+    2300074: StartPositionLV2
+    2300076: Wall Piece 002
+    2300078: Wall Piece 003
+    2300080: Wall Piece 004
+    2300082: Wall Piece 005
+    2300084: Wall Piece 006
+    2300086: Wall Piece 007
+    2300088: Wall Piece 008
+    2300090: Wall Piece 009
+    2300092: Wall Piece 01
+    2300094: Wall Piece 010
+    2300096: Wall Piece 011
+    2300098: Wall Piece 012
+    2300100: Wall Piece 013
+    2300102: Wall Piece 014
+    2300104: Wall Piece 015
+    2300106: Wall Piece 016
+    2300108: Wall Piece 017
+    2300110: Wall Piece 018
+    2300112: Wall Piece 019
+    2300114: Wall Piece 020
+    2300116: Wall Piece 021
+    2300118: Wall Piece 022
+    2300120: Wall Piece 025
+    2300122: Wall Piece 026
+    2300124: Wall Piece 027
+    2300126: Wall Piece 028
+    2300128: Wall Piece 029
+    2300130: Wall Piece 030
+    2300132: Wall Piece 031
+    2300134: Wall Piece 032
+    2300136: Wall Piece 033
+    2300138: Wall Piece 034
+    2300140: Wall Piece 035
+    2300142: Wall Piece 042
+    2300144: Wall Piece 043
+    2300146: Wall Piece 050
+    2300148: Wall Piece 051
+    2300150: Wall Piece 052
+    2300152: Wall Piece 053
+    2300154: Wall Piece 054
+    2300156: Wall Piece 055
+    2300158: Wall Piece 056
+    2300160: Wall Piece 057
+    2300162: Wall Piece 058
+    2300164: Wall Piece 059
+    2300166: Wall Piece 060
+    2300168: Wall Piece 061
+    2300170: Wall Piece 062
+    2300172: Wall Piece 063
+    2300174: Wall Piece 064
+    2300176: Wall Piece 065
+    2300178: Wall Piece 066
+    2300180: Wall Piece 067
+    2300182: Wall Piece 068
+    2300184: Wall Piece 069
+    2300186: Wall Piece 070
+    3300000: Box069
+    3300002: Box070
+    3300004: Box071
+    3300006: Box072
+    3300008: Box073
+    3300010: Box074
+    3300012: Box075
+    3300014: Box076
+    3300016: Box077
+    3300018: Box081
+    3300020: Box082
+    3300022: Box083
+    3300024: Box084
+    3300026: Box085
+    3300028: Box086
+    3300030: Box087
+    3300032: Box088
+    3300034: Box089
+    3300036: Box090
+    3300038: Box091
+    3300040: Box092
+    3300042: Box093
+    3300044: Box094
+    3300046: Box095
+    3300048: Box096
+    3300050: Box097
+    3300052: CubeSmall
+    3300054: Floor Piece 002
+    3300056: Floor Piece 003
+    3300058: Floor Piece 004
+    3300060: Floor Piece 007
+    3300062: Floor Piece 008
+    3300064: Floor Piece 01
+    3300066: Floor Piece 011
+    3300068: Floor Piece 012
+    3300070: StartPositionLV03
+    3300072: StartPositionLV1
+    3300074: StartPositionLV2
+    3300076: Wall Piece 002
+    3300078: Wall Piece 003
+    3300080: Wall Piece 004
+    3300082: Wall Piece 005
+    3300084: Wall Piece 006
+    3300086: Wall Piece 007
+    3300088: Wall Piece 008
+    3300090: Wall Piece 009
+    3300092: Wall Piece 01
+    3300094: Wall Piece 010
+    3300096: Wall Piece 011
+    3300098: Wall Piece 012
+    3300100: Wall Piece 013
+    3300102: Wall Piece 014
+    3300104: Wall Piece 015
+    3300106: Wall Piece 016
+    3300108: Wall Piece 017
+    3300110: Wall Piece 018
+    3300112: Wall Piece 019
+    3300114: Wall Piece 020
+    3300116: Wall Piece 021
+    3300118: Wall Piece 022
+    3300120: Wall Piece 025
+    3300122: Wall Piece 026
+    3300124: Wall Piece 027
+    3300126: Wall Piece 028
+    3300128: Wall Piece 029
+    3300130: Wall Piece 030
+    3300132: Wall Piece 031
+    3300134: Wall Piece 032
+    3300136: Wall Piece 033
+    3300138: Wall Piece 034
+    3300140: Wall Piece 035
+    3300142: Wall Piece 042
+    3300144: Wall Piece 043
+    3300146: Wall Piece 050
+    3300148: Wall Piece 051
+    3300150: Wall Piece 052
+    3300152: Wall Piece 053
+    3300154: Wall Piece 054
+    3300156: Wall Piece 055
+    3300158: Wall Piece 056
+    3300160: Wall Piece 057
+    3300162: Wall Piece 058
+    3300164: Wall Piece 059
+    3300166: Wall Piece 060
+    3300168: Wall Piece 061
+    3300170: Wall Piece 062
+    3300172: Wall Piece 063
+    3300174: Wall Piece 064
+    3300176: Wall Piece 065
+    3300178: Wall Piece 066
+    3300180: Wall Piece 067
+    3300182: Wall Piece 068
+    3300184: Wall Piece 069
+    3300186: Wall Piece 070
+    4300000: Wall Piece 043
+    4300002: Floor Piece 002
+    4300004: Wall Piece 003
+    4300006: Wall Piece 002
+    4300008: Wall Piece 004
+    4300010: Wall Piece 01
+    4300012: Wall Piece 005
+    4300014: Wall Piece 006
+    4300016: Wall Piece 008
+    4300018: Wall Piece 007
+    4300020: Floor Piece 01
+    4300022: Wall Piece 053
+    4300024: Wall Piece 052
+    4300026: Wall Piece 050
+    4300028: Wall Piece 051
+    4300030: CubeSmall
+    4300032: Wall Piece 011
+    4300034: Wall Piece 015
+    4300036: Wall Piece 016
+    4300038: Wall Piece 014
+    4300040: Wall Piece 010
+    4300042: Wall Piece 012
+    4300044: Wall Piece 017
+    4300046: Wall Piece 018
+    4300048: Wall Piece 013
+    4300050: Wall Piece 020
+    4300052: Wall Piece 019
+    4300054: Wall Piece 022
+    4300056: Wall Piece 021
+    4300058: Wall Piece 009
+    4300060: Wall Piece 032
+    4300062: Wall Piece 034
+    4300064: Wall Piece 035
+    4300066: Wall Piece 025
+    4300068: Wall Piece 026
+    4300070: Wall Piece 027
+    4300072: Wall Piece 029
+    4300074: Wall Piece 030
+    4300076: Wall Piece 028
+    4300078: Wall Piece 031
+    4300080: Wall Piece 033
+    4300082: Wall Piece 055
+    4300084: Wall Piece 056
+    4300086: Floor Piece 007
+    4300088: StartPositionLV1
+    4300090: Floor Piece 003
+    4300092: Floor Piece 004
+    4300094: Floor Piece 008
+    4300096: Wall Piece 042
+    4300098: Wall Piece 061
+    4300100: Floor Piece 012
+    4300102: Wall Piece 070
+    4300104: Box073
+    4300106: Box074
+    4300108: Box071
+    4300110: Wall Piece 054
+    4300112: Wall Piece 058
+    4300114: Wall Piece 067
+    4300116: Wall Piece 069
+    4300118: Wall Piece 062
+    4300120: Wall Piece 068
+    4300122: Wall Piece 060
+    4300124: Wall Piece 057
+    4300126: Wall Piece 065
+    4300128: Box090
+    4300130: Floor Piece 011
+    4300132: Wall Piece 059
+    4300134: Box069
+    4300136: Box072
+    4300138: Wall Piece 063
+    4300140: Wall Piece 064
+    4300142: Box070
+    4300144: StartPositionLV2
+    4300146: Wall Piece 066
+    4300148: Box085
+    4300150: StartPositionLV03
+    4300152: Box092
+    4300154: Box096
+    4300156: Box084
+    4300158: Box089
+    4300160: Box097
+    4300162: Box091
+    4300164: Box095
+    4300166: Box094
+    4300168: Box093
+    4300170: Box077
+    4300172: Box075
+    4300174: Box076
+    4300176: Box081
+    4300178: Box082
+    4300180: Box083
+    4300182: Box086
+    4300184: Box087
+    4300186: Box088
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 4331c3a41c1af7f4c98b1d4769cd18e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: default
+    second: {fileID: 2100000, guid: 0d4c30440ebc26f45b523a235aee9817, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

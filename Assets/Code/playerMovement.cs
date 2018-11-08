@@ -20,9 +20,7 @@ public class playerMovement : MonoBehaviour
 	[Range(0.25f, 0.75f)]
 	private float speedDecrease = 0.25f;
 	private Transform groundCheck;
-	private bool lookingRight;
-
-
+	public bool lookingRight;
 
     void Start()
     {
@@ -32,24 +30,9 @@ public class playerMovement : MonoBehaviour
 
     void Update()
 	{
-
-		if((rb.velocity.y != 0 || inAir) && Input.GetAxisRaw ("Jump") == 0) inAir = GroundCheck ();
-
-		Debug.Log(transform.rotation.eulerAngles);
-
-		if (transform.position.z != -12f) {
-			Vector3 temp = transform.position;
-			temp.z = -12f;
-			transform.position = temp;
-		}
-
-		Vector3 rotation = transform.rotation.eulerAngles;
-		if (Mathf.Round(rotation.x) != 270) {
-			rotation.x = 270;
-			rotation.y = lookingRight ? 90 : 270;
-			transform.rotation = Quaternion.Euler (rotation);
-		}
-	}
+        // Check for ground 
+        if ((rb.velocity.y != 0 || inAir) && Input.GetAxisRaw("Jump") == 0) inAir = GroundCheck();
+    }
 
 	// FixedUpdate for movement and non-frame-based (same speed even if lagging)
     private void FixedUpdate()
@@ -57,7 +40,7 @@ public class playerMovement : MonoBehaviour
 		// If horizontal movement happens LEFT/RIGHT
 		if (Input.GetAxisRaw ("Horizontal") != 0) {
 			// Move the player
-			rb.velocity += Camera.main.transform.right * Input.GetAxisRaw ("Horizontal") * speedIncrease;
+			rb.velocity += Camera.main.transform.parent.right * Input.GetAxisRaw ("Horizontal") * speedIncrease;
 
 			// Check player facing direction
 			if ((Input.GetAxisRaw ("Horizontal") > 0 && transform.rotation.eulerAngles.y != 180) || (Input.GetAxisRaw ("Horizontal") < 0 && transform.rotation.eulerAngles.y != 0)) {
@@ -70,9 +53,9 @@ public class playerMovement : MonoBehaviour
 
 			// if above max/walk speed negate the overflow
 			if (rb.velocity.x > walkSpeed)
-				rb.velocity -= Camera.main.transform.right * Input.GetAxisRaw ("Horizontal") * (rb.velocity.x - walkSpeed);
+				rb.velocity -= Camera.main.transform.parent.right * Input.GetAxisRaw ("Horizontal") * (rb.velocity.x - walkSpeed);
 			else if (rb.velocity.x < -walkSpeed)
-				rb.velocity += Camera.main.transform.right * Input.GetAxisRaw ("Horizontal") * (rb.velocity.x + walkSpeed);
+				rb.velocity += Camera.main.transform.parent.right * Input.GetAxisRaw ("Horizontal") * (rb.velocity.x + walkSpeed);
 		} else {
 			// Slowly decrease speed
 			if(!inAir)
@@ -94,7 +77,7 @@ public class playerMovement : MonoBehaviour
     bool GroundCheck()
 	{
 		RaycastHit hit;
-		if (Physics.Raycast (groundCheck.position, -Camera.main.transform.up, out hit, 0.01f)) {
+		if (Physics.Raycast (groundCheck.position, -Camera.main.transform.parent.up, out hit, 0.01f)) {
 			if (hit.collider.tag == "Ground") {
 				return false;
 			}

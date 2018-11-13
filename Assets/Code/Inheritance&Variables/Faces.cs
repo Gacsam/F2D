@@ -16,7 +16,7 @@ public class Faces {
 		case 5:
 			return new Vector3 (90, 180, -90);
 		case 6:
-			return new Vector3 (90, 180, -90);
+			return new Vector3 (90, 0, 0);
 		default:
 			return Vector3.zero;
 		}

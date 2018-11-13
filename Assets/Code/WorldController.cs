@@ -5,7 +5,6 @@ using UnityEngine;
 public class WorldController : MonoBehaviour {
 
 	private static WorldController singleton;
-	private WorldController worldScript;
 	public enum GameState{Menu, Player};
 	private GameState currentState;
 	Coroutine spinCoroutine;
@@ -16,10 +15,14 @@ public class WorldController : MonoBehaviour {
 	private GameObject current;
 	private GameObject right;
 	private int faceFacingCamera = 1;
+	[SerializeField]
+	private float breakTime = 1;
 
 	[SerializeField]
 	private float rotationSpeed = 3;
     GameObject player;
+
+	private bool canPlayerRotate = true;
 
 	void Awake(){
 		if (singleton == null) {
@@ -27,7 +30,6 @@ public class WorldController : MonoBehaviour {
 		} else {
 			Destroy (gameObject);
 		}
-		worldScript = GetComponent<WorldController> ();
 		DontDestroyOnLoad (gameObject);
 		SetupLevels ();
 	}
@@ -36,10 +38,10 @@ public class WorldController : MonoBehaviour {
         if(player != null)
         {
             Vector3 rotation = player.transform.rotation.eulerAngles;
-            if (Mathf.Round(rotation.x) != 270)
+            if (Mathf.Round(rotation.x) != 0)
             {
                 rotation.x = 270;
-                rotation.y = player.GetComponent<playerMovement>().lookingRight ? 90 : 270;
+                rotation.y = player.GetComponent<playerMovement>().lookingRight ? 0 : 180;
                 player.transform.rotation = Quaternion.Euler(rotation);
             }
         }
@@ -48,7 +50,7 @@ public class WorldController : MonoBehaviour {
             return;
         if (currentState == GameState.Player)
         {
-            if (Input.GetAxisRaw("RotateZ") != 0)
+            if (Input.GetAxisRaw("RotateZ") != 0 && canPlayerRotate)
             {
                 PlayerRotation((int)Mathf.Sign(Input.GetAxisRaw("RotateZ")));
             }
@@ -129,32 +131,24 @@ public class WorldController : MonoBehaviour {
 	public void ReloadCurrentlevel(bool createPlayer){
 		Destroy (current);
 		current = GetLevel (GetCurrentLevel(), Vector3.back);
-//		Quaternion temp = current.transform.rotation;
-//		temp.eulerAngles = current.GetComponent<TempFix_InitRotation> ().init;
-//		current.transform.rotation = temp;
 		if(createPlayer)
 			StartGame ();
 	}
 
 	public void StartGame(){
 		LoadPlayer ();
-		foreach (GatewayScript door in current.GetComponentsInChildren<GatewayScript>()) {
-			if (!door.isFinal)
-				door.playerEntered += PlayerEntered;
+		foreach (GatewayScript gateScript in current.GetComponentsInChildren<GatewayScript>()) {
+			if (gateScript.thisGateway == GatewayType.Tunnel)
+				gateScript.playerEntered += PlayerEnteredTunnel;
+			else if (gateScript.thisGateway == GatewayType.Edge)
+				gateScript.playerEntered += PlayerEnteredEdge;
 		}
 	}
-
-    private void PlayerEntered(GatewayScript theScript)
-    {
-        faceFacingCamera = theScript.GetFace();
-		RotateToFace();
-    }
-
 	private void LoadPlayer(){
 		player = GameObject.FindWithTag ("Player");
 		if(player)
 			Destroy (player);
-		Transform startingPosition = current.transform.Find ("StartingPos" + faceFacingCamera);
+		Transform startingPosition = current.transform.Find ("StartPos" + faceFacingCamera);
 		GameObject playerPrefab = Resources.Load<GameObject> ("Prefabs/Characters/Player");
 		player = Instantiate (playerPrefab, startingPosition.position, Quaternion.Euler(90,0,180), current.transform);
 	}
@@ -201,6 +195,7 @@ public class WorldController : MonoBehaviour {
 
 	public void RotateToFace(int newFace)
 	{
+		StopAllCoroutines ();
 		if (spinCoroutine == null) {
 			faceFacingCamera = newFace;
 			spinCoroutine = StartCoroutine (RotateFacing ());
@@ -226,7 +221,7 @@ public class WorldController : MonoBehaviour {
 		}
 	}
 
-	public void PlayerRotation(int i){
+	void PlayerRotation(int i){
 		if (spinCoroutine == null) {
 			Vector3 direction = Vector3.zero;
 			if (i == 1) {
@@ -234,11 +229,22 @@ public class WorldController : MonoBehaviour {
 			} else {
 				direction = Vector3.forward * -90;
 			}
-			spinCoroutine = StartCoroutine (PlayerRotate (direction));
+			if (direction == Vector3.zero)
+				return;
+			
+			StartCoroutine (PlayerRotateWithPause (direction));
 		}
 	}
 
-	IEnumerator PlayerRotate(Vector3 theDirection){
+	IEnumerator PlayerRotateWithPause(Vector3 theDirection){
+		spinCoroutine = StartCoroutine (RotateAroundAxis (theDirection));
+		canPlayerRotate = false;
+		yield return new WaitUntil (() => isSpinning() == false);
+		yield return new WaitForSeconds (breakTime);
+		canPlayerRotate = true;
+	}
+
+	IEnumerator RotateAroundAxis(Vector3 theDirection){
 		float x = 0;
 		while (true) {
 			x += rotationSpeed;
@@ -264,6 +270,9 @@ public class WorldController : MonoBehaviour {
 			// isKinematic makes the player animation dependant not physics (stops movement)
 			playerScript.GetComponent<Rigidbody> ().isKinematic = true;
 			yield return new WaitUntil (() => spinCoroutine == null);
+		}
+		// Check if player has not been deleted
+		if (playerScript != null) {
 			playerScript.enabled = true;
 			playerScript.GetComponent<Rigidbody> ().isKinematic = false;
 		}
@@ -273,4 +282,31 @@ public class WorldController : MonoBehaviour {
 	public bool isSpinning(){
 		return spinCoroutine != null;
 	}
+
+
+	private void PlayerEnteredTunnel(GatewayScript gateScript)
+	{
+		faceFacingCamera = gateScript.GetFace();
+		RotateToFace();
+	}
+
+	private void PlayerEnteredEdge(GatewayScript gateScript){
+
+		if (spinCoroutine == null) {
+			Vector3 direction = Vector3.up;
+
+			if (player.GetComponent<Rigidbody>().velocity.x > 0) {
+				direction *= 90;
+			} else {
+				direction *= -90;
+			}
+
+			if (direction == Vector3.zero)
+				return;
+
+			StartCoroutine (PlayerRotateWithPause (direction));
+			PausePlayer ();
+		}
+	}
+
 }

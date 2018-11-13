@@ -15,6 +15,7 @@ public class LevelControl : MonoBehaviour {
     [Range(0.1f, 1)]
     float pauseTime = 1;
     bool canRotate = true;
+
     // Update is called once per frame
     void Update() {
 		if (Input.GetAxis("Horizontal") != 0)

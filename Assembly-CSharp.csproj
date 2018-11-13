@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Code\Deprecated\CharacterTeleport.cs" />
+     <Compile Include="Assets\Code\Deprecated\DestroyDoor.cs" />
      <Compile Include="Assets\Code\Deprecated\doorkey.cs.cs" />
      <Compile Include="Assets\Code\Deprecated\doorscripts.cs.cs" />
      <Compile Include="Assets\Code\Deprecated\LevelControl.cs" />
@@ -59,13 +60,15 @@
      <Compile Include="Assets\Code\Deprecated\RotateClick.cs" />
      <Compile Include="Assets\Code\Deprecated\Temp_CornerRotate.cs" />
      <Compile Include="Assets\Code\Deprecated\TempFix_InitRotation.cs" />
-     <Compile Include="Assets\Code\DestroyDoor.cs" />
      <Compile Include="Assets\Code\GatewayScript.cs" />
+     <Compile Include="Assets\Code\HamsterHoleScript.cs" />
+     <Compile Include="Assets\Code\HamsterScript.cs" />
      <Compile Include="Assets\Code\Inheritance&amp;Variables\Faces.cs" />
      <Compile Include="Assets\Code\menuController.cs" />
      <Compile Include="Assets\Code\PlayerDeath.cs" />
      <Compile Include="Assets\Code\playerMovement.cs" />
      <Compile Include="Assets\Code\WorldController.cs" />
+     <Compile Include="Assets\ConveyorBelt.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />

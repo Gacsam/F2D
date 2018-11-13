@@ -16,11 +16,8 @@ public class menuController : MonoBehaviour {
 	MenuState currentMenuState = MenuState.MainMenu;
 
 	[SerializeField]
-	private Vector2Int[] arrayLevelCubeFace;
+	private Vector3Int[] arrayLevelCubeFaceHamster;
 	private Vector2Int selectedLevelCube = Vector2Int.one;
-
-	[SerializeField]
-	private float breakTime = 1;
 
 	void Start () {
 		// Find all active and inactive buttons within the children of the canvas
@@ -59,7 +56,7 @@ public class menuController : MonoBehaviour {
 		
 	IEnumerator SetCubeFace(){
 		int levelChange = (int)Mathf.Sign (Input.GetAxis ("Horizontal"));
-		int minMaxLevel = levelChange > 0 ? arrayLevelCubeFace.Length : 1;
+		int minMaxLevel = levelChange > 0 ? arrayLevelCubeFaceHamster.Length : 1;
 		int newLevelID = selectedLevelCube.x + levelChange;
 
 		// if selected level is already maximum level
@@ -71,19 +68,19 @@ public class menuController : MonoBehaviour {
 		levelText.text = "Level " + (newLevelID);
 
 		// If the selected Cube is not the cube it should be
-		if (selectedLevelCube.y != arrayLevelCubeFace [newLevelID - 1].x) {
+		if (selectedLevelCube.y != arrayLevelCubeFaceHamster [newLevelID - 1].x) {
 			worldControllerScript.ModLevel (levelChange, false);
 		}
 
 		yield return new WaitUntil (() => worldControllerScript.isSpinning() == false);
 
-		if (arrayLevelCubeFace [newLevelID - 1].y != worldControllerScript.GetCurrentFace ()) {
-			worldControllerScript.RotateToFace (arrayLevelCubeFace [newLevelID - 1].y);
+		if (arrayLevelCubeFaceHamster [newLevelID - 1].y != worldControllerScript.GetCurrentFace ()) {
+			worldControllerScript.RotateToFace (arrayLevelCubeFaceHamster [newLevelID - 1].y);
 		}
-		selectedLevelCube = new Vector2Int (newLevelID, arrayLevelCubeFace [newLevelID - 1].x);
+		selectedLevelCube = new Vector2Int (newLevelID, arrayLevelCubeFaceHamster [newLevelID - 1].x);
 
 		yield return new WaitUntil (() => worldControllerScript.isSpinning() == false);
-		yield return new WaitForSeconds (breakTime);
+		yield return new WaitForSeconds (0.1f);
 		currentlyRotating = false;
 	}
 		
@@ -122,9 +119,9 @@ public class menuController : MonoBehaviour {
 			buttonSelect = activeMenu.transform.GetChild (0).gameObject.GetComponent<Button> ();
 		} else if (currentMenuState == MenuState.LevelCompleted) {
 			transform.Find ("LevelCompleted").gameObject.SetActive (true);
-			cameraCoroutine = StartCoroutine (CameraZoom (false));
+			StartCoroutine (CameraZoom (false));
 		}else{
-			cameraCoroutine = StartCoroutine (CameraZoom (true));
+			StartCoroutine (CameraZoom (true));
 			worldControllerScript.UpdateState (WorldController.GameState.Player);
 		}
 		if (buttonSelect) {
@@ -133,21 +130,22 @@ public class menuController : MonoBehaviour {
 		}
 			
 
-		foreach (GatewayScript door in worldControllerScript.GetComponentsInChildren<GatewayScript>()) {
-			if (door.isFinal)
-				door.playerEntered += PlayerEntered;
+		foreach (GatewayScript gateScript in worldControllerScript.GetComponentsInChildren<GatewayScript>()) {
+			if (gateScript.thisGateway == GatewayType.Final)
+				gateScript.playerEntered += PlayerEntered;
 		}
 	}
-
-	private void PlayerEntered(GatewayScript theScript)
+		
+	private void PlayerEntered(GatewayScript gateScript)
 	{
-		if (theScript.isFinal)
-			LevelFinished (true);
+		if (gateScript.thisGateway == GatewayType.Final) {
+			if(AllHamstersSaved())
+				LevelFinished (true);
+		}
 	}
 
 	[SerializeField]
 	int cameraTime = 10;
-	Coroutine cameraCoroutine;
 	IEnumerator CameraZoom (bool isZoomingIn)
 	{
 		int fovCheck = isZoomingIn ? 60 : 20;
@@ -158,7 +156,7 @@ public class menuController : MonoBehaviour {
 				timer += zoomTime;
 				mainCamera.fieldOfView -= isZoomingIn ? zoomTime : -zoomTime;
 				if (timer >= 40) {
-					StopCoroutine (cameraCoroutine);
+					yield break;
 				}
 				yield return new WaitForSeconds (Time.deltaTime);
 			}
@@ -167,21 +165,39 @@ public class menuController : MonoBehaviour {
 
 	public void LevelFinished(bool success){
 		currentMenuState = MenuState.LevelCompleted;
+		worldControllerScript.ReloadCurrentlevel (false);
+		HamsterReset ();
 		UpdateMenu ();
 	}
 
 	public void ReturnToMenu(){
 		currentMenuState = MenuState.MainMenu;
 		worldControllerScript.ReloadCurrentlevel (false);
-		cameraCoroutine = StartCoroutine (CameraZoom (false));
+		StartCoroutine (CameraZoom (false));
+		HamsterReset ();
 		UpdateMenu ();
 	}
 
 	public void PlayerDied(){
-		int selectedFace = arrayLevelCubeFace [selectedLevelCube.x-1].y;
+		int selectedFace = arrayLevelCubeFaceHamster [selectedLevelCube.x-1].y;
 		if (selectedFace != worldControllerScript.GetCurrentFace ()) {
-			worldControllerScript.RotateToFace (arrayLevelCubeFace [selectedFace].y);
+			worldControllerScript.RotateToFace (arrayLevelCubeFaceHamster [selectedFace].y);
 		}
 		worldControllerScript.ReloadCurrentlevel (true);
+		HamsterReset ();
+	}
+
+	int currentHamsters = 0;
+	public void HamsterSaved(){
+		currentHamsters++;
+	}
+
+	public void HamsterReset(){
+		currentHamsters = 0;
+	}
+
+	private bool AllHamstersSaved(){
+		int req = selectedLevelCube.x - 1;
+		return currentHamsters == arrayLevelCubeFaceHamster [req].z;
 	}
 }

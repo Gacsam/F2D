@@ -77,10 +77,8 @@ public class playerMovement : MonoBehaviour
     bool GroundCheck()
 	{
 		RaycastHit hit;
-		if (Physics.Raycast (groundCheck.position, -Camera.main.transform.parent.up, out hit, 0.01f)) {
-			if (hit.collider.tag == "Ground") {
-				return false;
-			}
+		if (Physics.Raycast (groundCheck.position, -Camera.main.transform.parent.up, out hit, 0.1f)) {
+			return false;
 		}
 		return true;
 	}

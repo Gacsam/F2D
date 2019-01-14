@@ -25,7 +25,7 @@ public class CharacterTeleport : MonoBehaviour {
 			if (currentAngle == 0) {
 				if (isFinal) {
 					Destroy (other.gameObject);
-					GameObject.FindObjectOfType<menuController> ().LevelFinished(true);
+					GameObject.FindObjectOfType<MenuController> ().LevelFinished(true);
 					return;
 				}
 				currentCoroutine = StartCoroutine(MovePlayerToNext ());

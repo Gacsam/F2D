@@ -7,12 +7,12 @@ public class WorldController : MonoBehaviour {
 	private static WorldController singleton;
 	public enum GameState{Menu, Player};
 	private GameState currentState;
-	Coroutine spinCoroutine;
+	static Coroutine spinCoroutine;
 
 	private int currentLevel = 1;
 	// left middle right levels
 	private GameObject left;
-	private GameObject current;
+	private static GameObject current;
 	private GameObject right;
 	private int faceFacingCamera = 1;
 	[SerializeField]
@@ -35,16 +35,15 @@ public class WorldController : MonoBehaviour {
 	}
 
 	void Update(){
-        if(player != null)
-        {
-            Vector3 rotation = player.transform.rotation.eulerAngles;
-            if (Mathf.Round(rotation.x) != 0)
-            {
-                rotation.x = 270;
-                rotation.y = player.GetComponent<playerMovement>().lookingRight ? 0 : 180;
-                player.transform.rotation = Quaternion.Euler(rotation);
-            }
-        }
+		if (player != null) {
+			Transform hamsterInside = player.transform.Find ("HamsterInside");
+			{
+				Quaternion rotation = player.GetComponent<playerMovement> ().lookingRight ? Quaternion.identity : Quaternion.Euler (Vector3.up * 180);
+				hamsterInside.rotation = rotation;
+			}
+		} else {
+			player = GameObject.FindWithTag ("Player");
+		}
 
         if (spinCoroutine != null)
             return;
@@ -56,6 +55,11 @@ public class WorldController : MonoBehaviour {
             }
         }
     }
+
+	public static GameObject GetWorld(){
+		return current;
+	}
+
 
 	public void UpdateState(GameState newState){
 		currentState = newState;
@@ -129,20 +133,30 @@ public class WorldController : MonoBehaviour {
 	}
 		
 	public void ReloadCurrentlevel(bool createPlayer){
+		if (spinCoroutine != null)
+			StopCoroutine (spinCoroutine);
+		spinCoroutine = null;
 		Destroy (current);
-		current = GetLevel (GetCurrentLevel(), Vector3.back);
-		if(createPlayer)
-			StartGame ();
+
+		if (createPlayer) {
+			GameObject testForCheckpoint = Checkpoint.GetLevel ();
+			if (testForCheckpoint != null) {
+				current = Instantiate (testForCheckpoint, this.gameObject.transform);
+				current.SetActive (true);
+
+				return;
+			}
+			current = GetLevel (GetCurrentLevel (), Vector3.back);
+			if (createPlayer)
+				StartGame ();
+		} else {
+			current = GetLevel (GetCurrentLevel (), Vector3.back);
+		}
 	}
 
 	public void StartGame(){
+		Checkpoint.Reset ();
 		LoadPlayer ();
-		foreach (GatewayScript gateScript in current.GetComponentsInChildren<GatewayScript>()) {
-			if (gateScript.thisGateway == GatewayType.Tunnel)
-				gateScript.playerEntered += PlayerEnteredTunnel;
-			else if (gateScript.thisGateway == GatewayType.Edge)
-				gateScript.playerEntered += PlayerEnteredEdge;
-		}
 	}
 	private void LoadPlayer(){
 		player = GameObject.FindWithTag ("Player");
@@ -233,6 +247,7 @@ public class WorldController : MonoBehaviour {
 				return;
 			
 			StartCoroutine (PlayerRotateWithPause (direction));
+//            PausePlayer ();
 		}
 	}
 
@@ -279,23 +294,23 @@ public class WorldController : MonoBehaviour {
 		yield return null;
 	}
 
-	public bool isSpinning(){
+	public static bool isSpinning(){
 		return spinCoroutine != null;
 	}
 
 
-	private void PlayerEnteredTunnel(GatewayScript gateScript)
+	public void PlayerEnteredTunnel(GatewayScript gateScript)
 	{
 		faceFacingCamera = gateScript.GetFace();
 		RotateToFace();
 	}
 
-	private void PlayerEnteredEdge(GatewayScript gateScript){
+	public void PlayerEnteredEdge(GatewayScript gateScript){
 
 		if (spinCoroutine == null) {
 			Vector3 direction = Vector3.up;
 
-			if (player.GetComponent<Rigidbody>().velocity.x > 0) {
+            if (transform.position.x < player.transform.position.x){
 				direction *= 90;
 			} else {
 				direction *= -90;

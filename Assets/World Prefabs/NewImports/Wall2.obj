@@ -1,0 +1,25 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 25.11.2018 14:31:37
+
+#
+# object Wall
+#
+
+v  7.9811 -8.8242 0.1304
+v  7.9811 8.2437 0.1304
+v  -9.0868 8.2437 0.1304
+v  -9.0868 -8.8242 0.1304
+# 4 vertices
+
+vt 0.0059 0.9995 0.0000
+vt 0.0059 0.0005 0.0000
+vt 0.9970 0.0005 0.0000
+vt 0.9970 0.9995 0.0000
+# 4 texture coords
+
+o Wall
+g Wall
+s off
+f 1/1 2/2 3/3 4/4 
+# 1 polygons
+

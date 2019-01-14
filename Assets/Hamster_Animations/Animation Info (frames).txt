@@ -1,0 +1,7 @@
+Animation frame info
+
+Walk = 40
+Idle = 370
+Jump = 35
+Dance = 330
+

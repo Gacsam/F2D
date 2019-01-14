@@ -1,0 +1,627 @@
+fileFormatVersion: 2
+guid: bea7ecccc3928604faf5e9510d81ffaf
+timeCreated: 1543177200
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Brick035
+    100002: Brick036
+    100004: Brick037
+    100006: Brick038
+    100008: Brick039
+    100010: Brick040
+    100012: Brick041
+    100014: Brick042
+    100016: Brick043
+    100018: Brick044
+    100020: Brick045
+    100022: Brick046
+    100024: Brick047
+    100026: Brick048
+    100028: Brick049
+    100030: Brick050
+    100032: Brick051
+    100034: Brick052
+    100036: Brick053
+    100038: Brick054
+    100040: Brick055
+    100042: Brick056
+    100044: Brick057
+    100046: Brick058
+    100048: Brick059
+    100050: Brick060
+    100052: Brick061
+    100054: Brick062
+    100056: Brick063
+    100058: Brick064
+    100060: Brick065
+    100062: Brick066
+    100064: Brick116
+    100066: Brick117
+    100068: Brick118
+    100070: Brick119
+    100072: Brick120
+    100074: Brick121
+    100076: Brick122
+    100078: Brick123
+    100080: Brick124
+    100082: Brick125
+    100084: Brick126
+    100086: Brick127
+    100088: Brick128
+    100090: Brick129
+    100092: Brick130
+    100094: Brick131
+    100096: //RootNode
+    100098: Wall
+    100100: Wall002
+    100102: Wall003
+    100104: Wall004
+    100106: Wall006
+    100108: Wall007
+    400000: Brick035
+    400002: Brick036
+    400004: Brick037
+    400006: Brick038
+    400008: Brick039
+    400010: Brick040
+    400012: Brick041
+    400014: Brick042
+    400016: Brick043
+    400018: Brick044
+    400020: Brick045
+    400022: Brick046
+    400024: Brick047
+    400026: Brick048
+    400028: Brick049
+    400030: Brick050
+    400032: Brick051
+    400034: Brick052
+    400036: Brick053
+    400038: Brick054
+    400040: Brick055
+    400042: Brick056
+    400044: Brick057
+    400046: Brick058
+    400048: Brick059
+    400050: Brick060
+    400052: Brick061
+    400054: Brick062
+    400056: Brick063
+    400058: Brick064
+    400060: Brick065
+    400062: Brick066
+    400064: Brick116
+    400066: Brick117
+    400068: Brick118
+    400070: Brick119
+    400072: Brick120
+    400074: Brick121
+    400076: Brick122
+    400078: Brick123
+    400080: Brick124
+    400082: Brick125
+    400084: Brick126
+    400086: Brick127
+    400088: Brick128
+    400090: Brick129
+    400092: Brick130
+    400094: Brick131
+    400096: //RootNode
+    400098: Wall
+    400100: Wall002
+    400102: Wall003
+    400104: Wall004
+    400106: Wall006
+    400108: Wall007
+    2300000: Brick035
+    2300002: Brick036
+    2300004: Brick037
+    2300006: Brick038
+    2300008: Brick039
+    2300010: Brick040
+    2300012: Brick041
+    2300014: Brick042
+    2300016: Brick043
+    2300018: Brick044
+    2300020: Brick045
+    2300022: Brick046
+    2300024: Brick047
+    2300026: Brick048
+    2300028: Brick049
+    2300030: Brick050
+    2300032: Brick051
+    2300034: Brick052
+    2300036: Brick053
+    2300038: Brick054
+    2300040: Brick055
+    2300042: Brick056
+    2300044: Brick057
+    2300046: Brick058
+    2300048: Brick059
+    2300050: Brick060
+    2300052: Brick061
+    2300054: Brick062
+    2300056: Brick063
+    2300058: Brick064
+    2300060: Brick065
+    2300062: Brick066
+    2300064: Brick116
+    2300066: Brick117
+    2300068: Brick118
+    2300070: Brick119
+    2300072: Brick120
+    2300074: Brick121
+    2300076: Brick122
+    2300078: Brick123
+    2300080: Brick124
+    2300082: Brick125
+    2300084: Brick126
+    2300086: Brick127
+    2300088: Brick128
+    2300090: Brick129
+    2300092: Brick130
+    2300094: Brick131
+    2300096: Wall
+    2300098: Wall002
+    2300100: Wall003
+    2300102: Wall004
+    2300104: Wall006
+    2300106: Wall007
+    3300000: Brick035
+    3300002: Brick036
+    3300004: Brick037
+    3300006: Brick038
+    3300008: Brick039
+    3300010: Brick040
+    3300012: Brick041
+    3300014: Brick042
+    3300016: Brick043
+    3300018: Brick044
+    3300020: Brick045
+    3300022: Brick046
+    3300024: Brick047
+    3300026: Brick048
+    3300028: Brick049
+    3300030: Brick050
+    3300032: Brick051
+    3300034: Brick052
+    3300036: Brick053
+    3300038: Brick054
+    3300040: Brick055
+    3300042: Brick056
+    3300044: Brick057
+    3300046: Brick058
+    3300048: Brick059
+    3300050: Brick060
+    3300052: Brick061
+    3300054: Brick062
+    3300056: Brick063
+    3300058: Brick064
+    3300060: Brick065
+    3300062: Brick066
+    3300064: Brick116
+    3300066: Brick117
+    3300068: Brick118
+    3300070: Brick119
+    3300072: Brick120
+    3300074: Brick121
+    3300076: Brick122
+    3300078: Brick123
+    3300080: Brick124
+    3300082: Brick125
+    3300084: Brick126
+    3300086: Brick127
+    3300088: Brick128
+    3300090: Brick129
+    3300092: Brick130
+    3300094: Brick131
+    3300096: Wall
+    3300098: Wall002
+    3300100: Wall003
+    3300102: Wall004
+    3300104: Wall006
+    3300106: Wall007
+    4300000: Brick035
+    4300002: Brick036
+    4300004: Brick037
+    4300006: Brick038
+    4300008: Brick039
+    4300010: Brick040
+    4300012: Brick041
+    4300014: Brick042
+    4300016: Brick043
+    4300018: Brick044
+    4300020: Brick045
+    4300022: Brick046
+    4300024: Brick047
+    4300026: Brick048
+    4300028: Brick049
+    4300030: Brick050
+    4300032: Brick051
+    4300034: Brick052
+    4300036: Brick053
+    4300038: Brick054
+    4300040: Brick055
+    4300042: Brick056
+    4300044: Brick057
+    4300046: Brick058
+    4300048: Brick059
+    4300050: Brick060
+    4300052: Brick061
+    4300054: Brick062
+    4300056: Brick063
+    4300058: Brick064
+    4300060: Brick065
+    4300062: Brick066
+    4300064: Brick116
+    4300066: Brick117
+    4300068: Brick118
+    4300070: Brick119
+    4300072: Brick120
+    4300074: Brick121
+    4300076: Brick122
+    4300078: Brick123
+    4300080: Brick124
+    4300082: Brick125
+    4300084: Brick126
+    4300086: Brick127
+    4300088: Brick128
+    4300090: Brick129
+    4300092: Brick130
+    4300094: Brick131
+    4300096: Wall
+    4300098: Wall002
+    4300100: Wall003
+    4300102: Wall004
+    4300104: Wall006
+    4300106: Wall007
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick035Mat
+    second: {fileID: 2100000, guid: 95122245d99571740b473db56e6841f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick036Mat
+    second: {fileID: 2100000, guid: 7fe8316c01e42834fbd58aaa9ef4994d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick037Mat
+    second: {fileID: 2100000, guid: 6aab1fbd0208ea149800bc921e3cf3bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick038Mat
+    second: {fileID: 2100000, guid: 1856257383d864647972bdcb85117b9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick039Mat
+    second: {fileID: 2100000, guid: 54bf31c7d1620cd48a1977926751faea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick040Mat
+    second: {fileID: 2100000, guid: b53e2bea20a110148b9b4eb1861a81f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick041Mat
+    second: {fileID: 2100000, guid: 3e20e3a7823fed04b9986625163fc420, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick042Mat
+    second: {fileID: 2100000, guid: fd112500ebb680e489320d9d0fc37e9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick043Mat
+    second: {fileID: 2100000, guid: d8d98281c70bf81479edfe33800a0706, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick044Mat
+    second: {fileID: 2100000, guid: 643f2a53e2476da49bb296f48686d73c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick045Mat
+    second: {fileID: 2100000, guid: 6849e9ab809c37e48b7a7f967c7224c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick046Mat
+    second: {fileID: 2100000, guid: cb81afc2d156725468d8b525acc8be05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick047Mat
+    second: {fileID: 2100000, guid: 6ca82cdc96a7d914e833b4079a6cc7d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick048Mat
+    second: {fileID: 2100000, guid: 592758c4b257e6349a6409f5011fde9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick049Mat
+    second: {fileID: 2100000, guid: 3430f1e7c93a1d74db62d95ac038f251, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick050Mat
+    second: {fileID: 2100000, guid: 35e0a77e14e5aec44b1d07e109cc5191, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick051Mat
+    second: {fileID: 2100000, guid: 357aa7a99582a6d40ae34f637d2ff5d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick052Mat
+    second: {fileID: 2100000, guid: f812baa12d973f9498b00411a3fc7d08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick053Mat
+    second: {fileID: 2100000, guid: f1f9bc5a2faf23f46959df9a87a61348, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick054Mat
+    second: {fileID: 2100000, guid: 9926a6278d122bd40a6d54f8b9919390, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick055Mat
+    second: {fileID: 2100000, guid: 07de90acd74e38f41bebb677bd6b3fa9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick056Mat
+    second: {fileID: 2100000, guid: 2f2f761ed69603d468cc5fa73112f053, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick057Mat
+    second: {fileID: 2100000, guid: 3e455a2737553fc4ea568558be21ca5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick058Mat
+    second: {fileID: 2100000, guid: d1a3fa3ae9543fc4c99d32eeb16d7ef8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick059Mat
+    second: {fileID: 2100000, guid: f4367b3f3422f4149b8dce3019e3fe47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick060Mat
+    second: {fileID: 2100000, guid: c6757f33e6ee86046a50582c690fa909, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick061Mat
+    second: {fileID: 2100000, guid: 69cb674d67e3ef74eaebdfffa7731b54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick062Mat
+    second: {fileID: 2100000, guid: 8d65789e201e5fa49a8881f91917c895, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick063Mat
+    second: {fileID: 2100000, guid: cdd3aba79021c2d4f97d72b5b092aa12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick064Mat
+    second: {fileID: 2100000, guid: d850ea8d3f9e289468278bf6e30e6673, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick065Mat
+    second: {fileID: 2100000, guid: 96d8ce7df65cf944b901261f3dd4dd47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick066Mat
+    second: {fileID: 2100000, guid: 7ef36bd021d9ebf44b4c375ba61a3f82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick116Mat
+    second: {fileID: 2100000, guid: 8e5f75b9cb420a748a2b909530d085d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick117Mat
+    second: {fileID: 2100000, guid: 8b53b7d3454d06a4f9b827d08beffa0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick118Mat
+    second: {fileID: 2100000, guid: 6f5fbc075d61e7b4abba4c0328a13bb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick119Mat
+    second: {fileID: 2100000, guid: 52421695d71e8524eb17acbff603afa7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick120Mat
+    second: {fileID: 2100000, guid: fe4a276e1a66bbe48aa49382177f9a4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick121Mat
+    second: {fileID: 2100000, guid: d82d2d2cff1cc8f40b0121d96549d47f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick122Mat
+    second: {fileID: 2100000, guid: b00944d009991f04786ca7570213f682, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick123Mat
+    second: {fileID: 2100000, guid: ac53ecee1941f46409fbe44eb61e9476, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick124Mat
+    second: {fileID: 2100000, guid: 9a298afa5cd5e8046b4b2c933046513e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick125Mat
+    second: {fileID: 2100000, guid: 8aa5f6779a1357f468647ab4f93c48a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick126Mat
+    second: {fileID: 2100000, guid: 3395c6c60cfe70f4eb7449feb59c2cd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick127Mat
+    second: {fileID: 2100000, guid: 32dd117cf0c2eb74296861f84215863b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick128Mat
+    second: {fileID: 2100000, guid: b52c207ad2c4d8c4498ec4ab1c07452e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick129Mat
+    second: {fileID: 2100000, guid: 528b152f22f98f1449170b9a5daaf82d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick130Mat
+    second: {fileID: 2100000, guid: 2ce0627cf27e8bd478fb862c730ad650, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick131Mat
+    second: {fileID: 2100000, guid: 86b95de72cfccc24bad0772a470ba867, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall002Mat
+    second: {fileID: 2100000, guid: 22c8a3b66093f1347a04ee340a55673a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall003Mat
+    second: {fileID: 2100000, guid: 8ddb0d7f2117ffd4fa65e3b78203f712, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall004Mat
+    second: {fileID: 2100000, guid: 289765c1fd6101a4daf335d27bef5a76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall006Mat
+    second: {fileID: 2100000, guid: 0ff19a2faeff2cb488cbd12a7d35c757, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall007Mat
+    second: {fileID: 2100000, guid: 994ca1758f9c58a4caa0ad6be1019479, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallMat
+    second: {fileID: 2100000, guid: abb0b75503eac6f4cba2457fb9c7bd55, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

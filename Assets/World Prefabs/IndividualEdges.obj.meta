@@ -1,0 +1,177 @@
+fileFormatVersion: 2
+guid: 8b27d03feda98c74f9bfcf40b1990469
+timeCreated: 1542113852
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Rock1
+    100004: Rock2
+    100006: Rock3
+    100008: Rock4
+    100010: Rock5
+    100012: Rock6
+    100014: Rock7
+    100016: Rock8
+    100018: Rock9
+    400000: //RootNode
+    400002: Rock1
+    400004: Rock2
+    400006: Rock3
+    400008: Rock4
+    400010: Rock5
+    400012: Rock6
+    400014: Rock7
+    400016: Rock8
+    400018: Rock9
+    2300000: Rock1
+    2300002: Rock2
+    2300004: Rock3
+    2300006: Rock4
+    2300008: Rock5
+    2300010: Rock6
+    2300012: Rock7
+    2300014: Rock8
+    2300016: Rock9
+    3300000: Rock1
+    3300002: Rock2
+    3300004: Rock3
+    3300006: Rock4
+    3300008: Rock5
+    3300010: Rock6
+    3300012: Rock7
+    3300014: Rock8
+    3300016: Rock9
+    4300000: Rock1
+    4300002: Rock2
+    4300004: Rock3
+    4300006: Rock4
+    4300008: Rock5
+    4300010: Rock6
+    4300012: Rock7
+    4300014: Rock8
+    4300016: Rock9
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock1Mat
+    second: {fileID: 2100000, guid: 7c890fe778911d4438b73ae67bede026, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock2Mat
+    second: {fileID: 2100000, guid: 50ce165f8b0a2d4458495be41824522d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock3Mat
+    second: {fileID: 2100000, guid: 81261891de18bb340acfdd2c935d1dd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock4Mat
+    second: {fileID: 2100000, guid: 4be90151b9846774380cdbd0e78722f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock5Mat
+    second: {fileID: 2100000, guid: 8c64841c9a1358c4a8c409a0039dfd6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock6Mat
+    second: {fileID: 2100000, guid: 1a2d3275888449b419b58b949cf0dc6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock7Mat
+    second: {fileID: 2100000, guid: 40864a401161db344a4f27ea0c2f6370, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock8Mat
+    second: {fileID: 2100000, guid: a2c4900c711c501499b69b317ea302cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock9Mat
+    second: {fileID: 2100000, guid: 888bb4e189ada31468d68c086552d354, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

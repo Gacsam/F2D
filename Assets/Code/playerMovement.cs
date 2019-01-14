@@ -1,6 +1,4 @@
-﻿
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
  
 public class playerMovement : MonoBehaviour
@@ -11,77 +9,108 @@ public class playerMovement : MonoBehaviour
 	[SerializeField]
     private float jumpHeight = 3f;
     private Rigidbody rb;
-    private bool inAir = true;
-	private bool canJump = true;
+    private bool inAir = false;
 	[SerializeField]
 	[Range(0.5f, 1)]
 	private float speedIncrease = 0.75f;
-	[SerializeField]
-	[Range(0.25f, 0.75f)]
-	private float speedDecrease = 0.25f;
-	private Transform groundCheck;
-	public bool lookingRight;
+	public bool lookingRight = true;
 
+    [SerializeField]
+    [Range(0.75f, 1)]
+    private float speedDecrease = 0.75f;
+
+	private float colliderExtents;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-		groundCheck = transform.Find ("GroundCheck");
+		colliderExtents = this.GetComponent<Collider> ().bounds.size.y;
     }
 
     void Update()
 	{
-        // Check for ground 
-        if ((rb.velocity.y != 0 || inAir) && Input.GetAxisRaw("Jump") == 0) inAir = GroundCheck();
+        // Check for ground
+        if (inAir || rb.velocity.y < -1) inAir = GroundCheck();
+
+		if (PushedUp && PushedDown)
+		{
+			Debug.Log("askljdfhasoijdfhydsa");
+		}
+		PushedUp = false;
+		PushedDown = false;
     }
 
 	// FixedUpdate for movement and non-frame-based (same speed even if lagging)
     private void FixedUpdate()
-    {		
+	{		
+
+
 		// If horizontal movement happens LEFT/RIGHT
-		if (Input.GetAxisRaw ("Horizontal") != 0) {
-			// Move the player
-			rb.velocity += Camera.main.transform.parent.right * Input.GetAxisRaw ("Horizontal") * speedIncrease;
+        if (Input.GetAxisRaw("Horizontal") != 0)
+        {
+            // Move the player
+            rb.velocity += Camera.main.transform.parent.right * Input.GetAxisRaw("Horizontal") * speedIncrease;
 
-			// Check player facing direction
-			if ((Input.GetAxisRaw ("Horizontal") > 0 && transform.rotation.eulerAngles.y != 180) || (Input.GetAxisRaw ("Horizontal") < 0 && transform.rotation.eulerAngles.y != 0)) {
-				Vector3 rotation = transform.rotation.eulerAngles;
-				// Set rotation.y to (if z = 0) set it to 180 otherwise 0
-				rotation.y = (Input.GetAxisRaw ("Horizontal") > 0) == true ? 180 : 0;
-				lookingRight = (Input.GetAxisRaw ("Horizontal") > 0) == true ? true : false;
-				transform.rotation = Quaternion.Euler (rotation);
-			}
+            // Check player facing direction
+            if (Input.GetAxisRaw("Horizontal") != 0)
+            {
+                lookingRight = (Input.GetAxisRaw("Horizontal") > 0) == true ? true : false;
+            }
 
-			// if above max/walk speed negate the overflow
-			if (rb.velocity.x > walkSpeed)
-				rb.velocity -= Camera.main.transform.parent.right * Input.GetAxisRaw ("Horizontal") * (rb.velocity.x - walkSpeed);
-			else if (rb.velocity.x < -walkSpeed)
-				rb.velocity += Camera.main.transform.parent.right * Input.GetAxisRaw ("Horizontal") * (rb.velocity.x + walkSpeed);
-		} else {
-			// Slowly decrease speed
-			if(!inAir)
-				rb.velocity *=  1 - speedDecrease;
-		}
+            // if above max/walk speed negate the overflow
+            if (rb.velocity.x > walkSpeed)
+                rb.velocity = new Vector3(walkSpeed, rb.velocity.y, rb.velocity.z);
+            else if (rb.velocity.x < -walkSpeed)
+                rb.velocity = new Vector3(-walkSpeed, rb.velocity.y, rb.velocity.z);
+        }
+        else
+        {
+            if (rb.velocity.x != 0)
+            {
+                Vector3 tempVel = rb.velocity;
+                tempVel.x *= speedDecrease;
+                rb.velocity = tempVel;
+
+                tempVel = rb.angularVelocity;
+                tempVel.x *= speedDecrease * Time.deltaTime;
+                rb.angularVelocity = tempVel;
+            }
+        }
 
 		// Jump
-		if (canJump) {
-			if (Input.GetAxisRaw ("Jump") != 0 && !inAir) {
+		if (!inAir && rb.useGravity) {
+			if (Input.GetAxisRaw ("Jump") != 0) {
 				inAir = true;
-				canJump = false;
-				rb.AddForce (Vector3.up * jumpHeight, ForceMode.VelocityChange);
+				rb.velocity = new Vector3 (rb.velocity.x, jumpHeight, rb.velocity.z);
+                rb.angularVelocity = new Vector3(rb.angularVelocity.x, jumpHeight, rb.angularVelocity.z);
 			}
-		} else if (Input.GetAxisRaw ("Jump") == 0) {
-			canJump = true;
 		}
 	}
 
+    // we're testing if we're in the air
     bool GroundCheck()
-	{
-		RaycastHit hit;
-		if (Physics.Raycast (groundCheck.position, -Camera.main.transform.parent.up, out hit, 0.1f)) {
+    {
+        if (rb.velocity.y > 0)
+            return true;
+
+		Vector3 testPos = transform.position;
+		testPos.y -= colliderExtents * 0.5f;
+
+        if(Physics.CheckSphere(testPos, 0.1f, 1, QueryTriggerInteraction.Ignore)){
+            Destroy(Instantiate((GameObject) Resources.Load("Effects/CFX3_Hit_SmokePuff"), transform.position, transform.rotation), 1);
 			return false;
 		}
-		return true;
+		return true;   
+	}
+
+	bool PushedUp, PushedDown;
+	void OnCollisionStay(Collision collide)
+	{
+		for (int i = 0; i < collide.contacts.Length; i++) {
+			if (collide.contacts [i].point.y < transform.position.y + colliderExtents) {
+				PushedUp = true;
+			} else if (collide.contacts [i].point.y > transform.position.y + colliderExtents  * 0.8f) {
+  				PushedDown = true;
+			}
+		}
 	}
 }
-
-

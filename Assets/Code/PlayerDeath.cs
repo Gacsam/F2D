@@ -4,18 +4,34 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour {
 
-	public delegate void PlayerEntered();
-	public event PlayerEntered playerDied;
+	public delegate void CharacterDied();
+	public event CharacterDied charDied;
+    private ParticleSystem charDeath;
+    bool triggered;
 
-	void Start(){
-		this.playerDied += GameObject.FindObjectOfType<menuController> ().PlayerDied;
-	}
-		
+
+    [SerializeField]
+    float timeWait = 2;
 
 	void OnTriggerEnter(Collider other){
 		if (other.gameObject.tag == "Player" || other.gameObject.tag == "Hamster") {
-			if (playerDied != null)
-				playerDied();
+            other.GetComponent<Rigidbody>().isKinematic = true;
+            GameObject poofParticle = Instantiate((GameObject) Resources.Load("Effects/CFX_MagicPoof"), other.transform.position + Vector3.back, other.transform.rotation);
+            Destroy(other.gameObject);
+            Instantiate((GameObject) Resources.Load("Effects/CFX_Virus"), poofParticle.transform.position, poofParticle.transform.rotation, poofParticle.transform);
+            ResourceLoader.SoundPlay("DeathHappens", other.transform);
+            // replace timeWait with above when sound is in
+            StartCoroutine(PlayerDied(timeWait));
 		}
 	}
+
+    IEnumerator PlayerDied(float waitTime){
+        yield return new WaitForSeconds(waitTime);
+        this.charDied += GameObject.FindObjectOfType<MenuController> ().PlayerDied;
+        if (charDied != null) {
+            charDied ();
+            this.charDied -= GameObject.FindObjectOfType<MenuController> ().PlayerDied;
+        }
+        yield return null;
+    }
 }

@@ -1,0 +1,209 @@
+fileFormatVersion: 2
+guid: c0389aa304fe4d2459ff27a2d8b51441
+timeCreated: 1547124817
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: CATRigHub001
+    100002: CATRigHub002
+    100004: CATRigHub002Bone001
+    100006: CATRigHub002Bone002
+    100008: CATRigLArm1
+    100010: CATRigLArm2
+    100012: CATRigLArmCollarbone
+    100014: CATRigLArmDigit11
+    100016: CATRigLArmDigit12
+    100018: CATRigLArmDigit21
+    100020: CATRigLArmDigit22
+    100022: CATRigLArmDigit31
+    100024: CATRigLArmDigit32
+    100026: CATRigLArmDigit41
+    100028: CATRigLArmDigit42
+    100030: CATRigLArmPalm
+    100032: CATRigLLeg1
+    100034: CATRigLLegPlatform
+    100036: CATRigRArm1
+    100038: CATRigRArm2
+    100040: CATRigRArmCollarbone
+    100042: CATRigRArmDigit11
+    100044: CATRigRArmDigit12
+    100046: CATRigRArmDigit21
+    100048: CATRigRArmDigit22
+    100050: CATRigRArmDigit31
+    100052: CATRigRArmDigit32
+    100054: CATRigRArmDigit41
+    100056: CATRigRArmDigit42
+    100058: CATRigRArmPalm
+    100060: CATRigRLeg1
+    100062: CATRigRLegPlatform
+    100064: CATRigSpine1
+    100066: CATRigSpine2
+    100068: CATRigSpine3
+    100070: CATRigSpine4
+    100072: CATRigSpine5
+    100074: CATRigTail1
+    100076: CATRigTail2
+    100078: //RootNode
+    100080: Hamster_Low
+    400000: CATRigHub001
+    400002: CATRigHub002
+    400004: CATRigHub002Bone001
+    400006: CATRigHub002Bone002
+    400008: CATRigLArm1
+    400010: CATRigLArm2
+    400012: CATRigLArmCollarbone
+    400014: CATRigLArmDigit11
+    400016: CATRigLArmDigit12
+    400018: CATRigLArmDigit21
+    400020: CATRigLArmDigit22
+    400022: CATRigLArmDigit31
+    400024: CATRigLArmDigit32
+    400026: CATRigLArmDigit41
+    400028: CATRigLArmDigit42
+    400030: CATRigLArmPalm
+    400032: CATRigLLeg1
+    400034: CATRigLLegPlatform
+    400036: CATRigRArm1
+    400038: CATRigRArm2
+    400040: CATRigRArmCollarbone
+    400042: CATRigRArmDigit11
+    400044: CATRigRArmDigit12
+    400046: CATRigRArmDigit21
+    400048: CATRigRArmDigit22
+    400050: CATRigRArmDigit31
+    400052: CATRigRArmDigit32
+    400054: CATRigRArmDigit41
+    400056: CATRigRArmDigit42
+    400058: CATRigRArmPalm
+    400060: CATRigRLeg1
+    400062: CATRigRLegPlatform
+    400064: CATRigSpine1
+    400066: CATRigSpine2
+    400068: CATRigSpine3
+    400070: CATRigSpine4
+    400072: CATRigSpine5
+    400074: CATRigTail1
+    400076: CATRigTail2
+    400078: //RootNode
+    400080: Hamster_Low
+    4300000: Hamster_Low
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Hamster_Low
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default
+    second: {fileID: 2100000, guid: b3dcff17981b8bc408b8c8e03663b50e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: 92098b7072048d549903424aee68bcc8, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
